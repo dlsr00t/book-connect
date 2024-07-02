@@ -10,7 +10,7 @@ import carrinho from "./assets/carrinho.png";
 import botaoAna from "./assets/botaoAna.png";
 import { Button, Image, TouchableOpacity, ImageBackground,  } from 'react-native';
 import TesteDoubleCheck from "./src/screens/Home/home.js";
-
+import { LinearGradient } from 'expo-linear-gradient';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -50,69 +50,88 @@ export const DrawerNavigate = () => {
 
     return (
 
-        <Drawer.Navigator initialRouteName="Home">
-
-          <Drawer.Screen
-          name="Home"
-          component={Home} 
-          
-          options={{
-            title:"Home",
+        <Drawer.Navigator 
+        initialRouteName="Home"
+        screenOptions={{
+            drawerStyle:{
+                backgroundColor:"rgb(243, 164, 120)",
+                color:"green",
+            },
             /*
-            headerTitle:(props) => <Image source={{uri: 'https://reactjs.org/logo-og.png'}}
-            style={{width: 20, height: 20}} />,
+            drawerContentStyle:{
+                color:"green",
+            },
+            drawerLabelStyle:{
+                backgroundColor:"green"
+            },
+            drawerItemStyle:{
+                backgroundColor:"blue"
+            }
             */
-
-            /*
-            headerRight: () => <DrawerButton/>,
-            */
-
-            /*
-            headerRight: () => (
-                <DrawerButton
-                onclick ={ ( ) => this.props.navigation.openDrawer()} 
-                />
-            ),
-            */
+        }}  
+        >
             
+            <Drawer.Screen
+                name="Home"
+                component={Home} 
+                
+                options={{
+                title:"INICIO",
+                /*
+                headerTitle:(props) => <Image source={{uri: 'https://reactjs.org/logo-og.png'}}
+                style={{width: 20, height: 20}} />,
+                */
 
-            headerLeft: () => (
-                <TouchableOpacity onPress={openDrawer} >
-                    <Image source={botaoAna} style={{marginLeft:10}}/>
-                </TouchableOpacity>
+                /*
+                headerRight: () => <DrawerButton/>,
+                */
 
-            ),
+                /*
+                headerRight: () => (
+                    <DrawerButton
+                    onclick ={ ( ) => this.props.navigation.openDrawer()} 
+                    />
+                ),
+                */
+                
 
-            headerTitle: () => <Image source={logo} />,
-            headerTitleAlign:"center",
-            
-            headerRight: () => (
-                <TouchableOpacity>
-                    <Image source={carrinho} style={{marginRight:10}}/>
-                </TouchableOpacity>
-            ),
-            
+                headerLeft: () => (
+                    <TouchableOpacity onPress={openDrawer} >
+                        <Image source={botaoAna} style={{marginLeft:10}}/>
+                    </TouchableOpacity>
 
-            headerStyle:{
-                backgroundColor:"rgb(255, 246, 241)",
+                ),
+
+                headerTitle: () => <Image source={logo} />,
+                headerTitleAlign:"center",
+                
+                headerRight: () => (
+                    <TouchableOpacity>
+                        <Image source={carrinho} style={{marginRight:10}}/>
+                    </TouchableOpacity>
+                ),
+                
+
+                headerStyle:{
+                    backgroundColor:"rgb(255, 246, 241)",
 
 
-                shadowOffset: {
-                    width: 0,
-                    height: 2,
+                    shadowOffset: {
+                        width: 0,
+                        height: 2,
 
-                },
-                shadowOpacity: 0.5,
-                shadowRadius: 3.84,
+                    },
+                    shadowOpacity: 0.5,
+                    shadowRadius: 3.84,
 
-                elevation: 3,
+                    elevation: 3,
 
-                },  
-            
-          }}
+                    },  
+                
+                }}
 
-          />
-          <Drawer.Screen name="Login" component={LoginPt2}
+            />
+          <Drawer.Screen name="MEU PERFIL" component={LoginPt2}
           options={{
             headerShown:false,
           }}
