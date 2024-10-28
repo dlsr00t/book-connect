@@ -147,37 +147,46 @@ const LoginPt2 = ({navigation}) =>{
                             
                         </LinearGradient>
                         <Image source={fotoUsuario} style={{position:'absolute',display:'flex',justifyContent:'center', alignSelf:'center', top:-185}}/>
-                        <View style={{zIndex:114, position:"absolute", top:-40, left:30}}>
-                            <Text>Usuário</Text>
+                        <View style={{zIndex:114, position:"absolute", top:-65, left:60, }}>
+                            <Text style={{color:"white", fontSize:20,fontFamily:"BalooTammudu2_700Bold", top:17, left:6}}>usuário:</Text>
                             <TextInput 
                             placeholder="example@example.com"
+                            placeholderTextColor={"gray"}
                             secureTextEntry={ false }
                             style={{            
                                 borderWidth:1,
                                 marginBottom:15,
                                 marginTop:3,
                                 padding:10,
-                                width:320,
+                                width:283,
                                 borderRadius:4,
-                                zIndex:113
+                                zIndex:113,
+                                borderColor:"#FF3D00",
+                                backgroundColor:"white",
+                                borderRadius:"10px"
                                 
                                 }}
                             />
                         </View>
 
-                        <View style={{zIndex:114, position:"absolute", top:30, left:30}}>
-                            <Text>Senha</Text>
+                        <View style={{zIndex:114, position:"absolute", top:10, left:60}}>
+                            <Text style={{color:"white", fontSize:20, fontFamily:"BalooTammudu2_700Bold", top:17, left:6}}>senha:</Text>
                             <TextInput 
                             placeholder="########"
+                            placeholderTextColor={"gray"}
                             secureTextEntry={ true }
                             style={{            
                                 borderWidth:1,
                                 marginBottom:15,
                                 marginTop:3,
                                 padding:10,
-                                width:320,
+                                width:283,
                                 borderRadius:4,
-                                zIndex:113
+                                zIndex:113,
+                                borderColor:"#FF3D00",
+                                backgroundColor:"white",
+                                borderRadius:"10px",
+
                                 }}
                             />
                         </View>

@@ -62,42 +62,22 @@ export const Home = ({navigation}) =>{
         height: 370,
     },
     card:{
-      /*
-      display:'flex',
-      flexWrap:'nowrap',
-      justifyContent:'center',
-      alignItems:'center',
-      alignSelf:'center',
-      */
+      display:"flex",
       width:158,
       height:239  ,
       backgroundColor:"#FFF6F1",
-
-      marginLeft:21
-
+      marginRight:10
     },
     card2:{
-      
+      display:"flex",
       width:158,
       height:239  ,
       backgroundColor:"#FFF6F1",
-      
-      position:'absolute',
-      top:77,
-      left:200 
-      
-     
-      /*
-      display:'flex',
-      justifyContent:'center',
-      alignItems:'center',
-      alignSelf:'center', 
-      */
+
     }, 
     sliding:{
       backgroundColor:'#FFFFFF',
       marginTop:20,
-      marginLeft:26,
       height:16,
       width:327,
       borderRadius:23,
@@ -144,25 +124,31 @@ export const Home = ({navigation}) =>{
   });
   return(
     <View>
-      <View style={{display:'flex', flexWrap:'nowrap'}}>
+      <View style={{display:'flex', justifyContent:"center", alignItems:"center"}}>
         <LinearGradient
         // Background Linear Gradient
         colors={['#BF4A08', '#C06E1A']} style={estilos.fundo}>
         </LinearGradient>
         <Text style={estilos.titulo}>POPULARES</Text>
         <Text style={estilos.subTitulo}>essa semana</Text>
-        <View style={estilos.card}>
+        
+        <View style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+          <View style={estilos.card}>
+
+          </View>
+
+          <View style={estilos.card2}>
+
+          </View>
+
+
 
         </View>
 
-        <View style={estilos.card2}>
-
-        </View>
-
-        <View style={estilos.sliding}>
-          
-        </View>
-
+        <View style={{display:'flex'}}>
+            <View style={estilos.sliding}>
+            </View> 
+          </View>
 
       </View>
 
